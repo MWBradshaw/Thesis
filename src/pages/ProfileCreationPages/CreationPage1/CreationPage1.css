@@ -1,0 +1,33 @@
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 80vh;
+}
+
+.creation-profile-body1 {
+    display: grid;
+    width: 100%;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+    grid-gap: 15px;
+}
+
+.input-body {
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+}
+
+
+
+input[type=text], input[type=number], select {
+    height: 25px;
+    width: 350px;
+    background-color: white;
+}
+
+select option {
+    color: black;
+}
+

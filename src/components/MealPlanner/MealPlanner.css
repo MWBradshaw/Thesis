@@ -1,0 +1,14 @@
+.main-mealplanner-header {
+    text-align: center;
+    width: 100vw;
+}
+
+.search-button-body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.search-button-body input {
+    margin-bottom: 30px;
+}

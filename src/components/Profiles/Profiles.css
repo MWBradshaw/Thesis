@@ -1,0 +1,16 @@
+.main-profiles-header {
+    text-align: center;
+    width: 100vw;
+}
+
+.profile-list-body {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    margin: auto;
+}
+
+.create-profile-button {
+    width: 224px;
+    height: 224px;
+    text-align: center;
+}

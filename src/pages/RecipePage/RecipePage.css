@@ -1,0 +1,65 @@
+.recipe-page {
+    display: flex;
+    width: 100vw;
+    flex-direction: column;
+    justify-content: center;
+    margin: 0 auto;
+    align-items: center;
+}
+
+#recipe-image {
+    display: block;
+    width: 250px;
+    height: auto;
+    margin: 0 auto;
+}
+
+.favourite-button {
+    width: 150px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 40px 0px;
+    border-radius: 15px;
+    background-color: #47a8bd;
+}
+
+.favourite-button p {
+    margin-right: 15px;
+}
+
+
+.info-header {
+    text-align: center;
+}
+
+.info-body {
+   display: flex;
+   justify-content: space-between;
+   align-items: flex-start;
+}
+
+.recipe-ingredients-body {
+    width: 500px;
+    height: auto;
+    border-radius: 20px;
+    border: 3px solid white;
+    padding: 10px;
+    margin-right: 40px;
+}
+
+.recipe-ingredients-body p {
+    
+}
+
+.recipe-instructions-body {
+    width: 500px;
+    border-radius: 20px;
+    border: 3px solid white;
+    padding: 10px;
+    margin-left: 40px;
+}
+
+.recipe-info-body + .recipe-info-body {
+    margin-left
+}
