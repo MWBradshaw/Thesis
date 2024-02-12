@@ -1,8 +1,8 @@
 import React from "react";
 
-function DashboardHeader() {
+function DashboardHeader({ name }) {
     return(
-        <h2>Welcome Back</h2>
+        <h2>Welcome Back {name}</h2>
     )
 }
 

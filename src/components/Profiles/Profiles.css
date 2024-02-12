@@ -6,11 +6,35 @@
 .profile-list-body {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
+    gap: 120px;
     margin: auto;
+    color: white;
+}
+
+.profile {
+    width: 224px;
+    height: 224px;
+    text-align: center;
+    color: white;
+}
+
+.profile:hover {
+    color: white;
+}
+
+.profile-list-img {
+    width: 224px;
+    height: 224px;
+    border-radius: 50%;
 }
 
 .create-profile-button {
     width: 224px;
     height: 224px;
     text-align: center;
+    color: white;
+}
+
+.create-profile-button:hover {
+    color: white;
 }

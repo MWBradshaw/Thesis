@@ -11,16 +11,25 @@ function Meal({ meal }) {
             setImageUrl(data.image)
         })
     }, [meal.id])
-    return(
-        <div>
-            <h2>{meal.title}</h2>
-            <img src={imageUrl} alt="recipe" />
-            <ul>
-                <li>Preparation time: {meal.readyInMinutes} minutes</li>
-                <li>Number of servings: {meal.servings}</li>
-            </ul>
 
-            <a href={meal.sourceUrl}>Go to Recipe</a>
+    return(
+        <div className="meal-container">
+            <div className="meal-info-container">
+                <div className="meal-title-container">
+                    <h3>{meal.title}</h3>
+                </div>
+                <div className="meal-image-container" >
+                    <img className="meal-image" src={imageUrl} alt="recipe" />
+                </div>
+                <ul className="meal-container-list" >
+                    <li>Preparation time: {meal.readyInMinutes} minutes</li>
+                    <li>Number of servings: {meal.servings}</li>
+                </ul>
+            </div>
+
+            <div className="meal-plan-link-container">
+                <a className="meal-plan-item-link" href={meal.sourceUrl} target="_blank">Go to Recipe</a> 
+            </div>
         </div>
     )
 }

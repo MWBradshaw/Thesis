@@ -11,21 +11,30 @@ import CreationPage1 from './pages/ProfileCreationPages/CreationPage1/CreationPa
 import CreationPage2 from './pages/ProfileCreationPages/CreationPage2/CreationPage2.jsx';
 import CreationPage3 from './pages/ProfileCreationPages/CreationPage3/CreationPage3.jsx';
 import CreationPage4 from './pages/ProfileCreationPages/CreationPage4/CreationPage4.jsx';
+import ScrollToTop from "./ScrollToTop/ScrollToTop.jsx";
 import './App.css'
 
 export const ProfileContext = createContext();
+const profiles = [{ name: 'John', age: 25, height: 1.71 , weight: 170, imgSrc: 'src/assets/john_img.png' }, { name: 'Daisy', age: 30, height: 1.80, weight: 190, imgSrc: 'src/assets/daisy_img.png' }];
+
+for(const profile of profiles) {
+  const weightKg = profile.weight / 2.2
+  const bmi = weightKg / (profile.height ** 2);
+  profile['bmi'] = bmi.toFixed(0);
+}
 
 function App() {
-  const profiles = [{ name: 'John' }];
+  
 
   return (
     <ProfileContext.Provider value={profiles}>
       <div>
         <BrowserRouter>
+          <ScrollToTop />
           <Navbar />
           <div className="content">
             <Routes>
-              <Route path="/" element={<Dashboard />} />
+              <Route path="/" element={<Dashboard profile={profiles[0]} />} />
               <Route path="/inventory" element={<Inventory />} />
               <Route path="/mealplanner" element={<MealPlanner />} />
               <Route path="/profiles" element={<Profiles/>} />

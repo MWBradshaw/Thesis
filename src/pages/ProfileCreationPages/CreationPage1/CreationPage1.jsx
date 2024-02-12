@@ -1,12 +1,15 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import ProfilesHeader from '../../../components/Profiles/ProfilesHeader/ProfilesHeader';
+import ProfileCreationHeader from '../ProfileCreationHeader/ProfileCreationHeader';
 import "./CreationPage1.css";
 
 function CreationPage1() {
     return(
         <div className="container">
-            <div className="creation-profile-body1">
+            <div>
+                <ProfileCreationHeader title="Add New Profile" />
+            </div>
+            <div className="creation-profile-container1">
                 <div>
                     <img src="src/assets/create-profile-button.png" />
                     <p>Upload Image</p>
@@ -35,8 +38,8 @@ function CreationPage1() {
 
                 <div>
                     <div className="input-body">
-                        <label for="height">Height (cm):</label>
-                        <input type="text" name="height" placeholder="Enter height in centimeters" />
+                        <label for="height">Height (m):</label>
+                        <input type="text" name="height" placeholder="Enter height in meters" />
                     </div>
 
                     <div className="input-body">
@@ -46,9 +49,15 @@ function CreationPage1() {
                 </div>
             </div>
 
-            <Link>
+            <div className="profile-navigation-body">
+                <Link className="navigation-profile-page-button" to="/profiles">
+                    <p>Go Back</p>
+                </Link>
 
-            </Link>
+                <Link className="navigation-profile-page-button" to="/profiles/page2">
+                    <p>Next</p>
+                </Link>
+            </div>
         </div>
     )
 }

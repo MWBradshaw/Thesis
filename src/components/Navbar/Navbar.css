@@ -8,6 +8,7 @@
     right: 0;
     border-bottom: 1px solid black;
     background-color: #242424;
+    z-index: 1000;
 }
 
 #navbar-brand-body {

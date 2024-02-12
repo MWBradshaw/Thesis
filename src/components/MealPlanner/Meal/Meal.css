@@ -1,0 +1,62 @@
+.meal-container {
+    width: 420px;
+    min-height: 450px;
+    position: relative;
+    border: 1px solid white;
+    background-color: white;
+    border-radius: 25px;
+}
+
+.meal-title-container {
+    height: 75px;
+    text-align: center;
+}
+
+.meal-container * {
+    color: black;
+}
+
+.meal-info-container {
+    min-height: 450px;
+}
+
+.meal-image {
+    width: 100%;
+    height: auto;
+}
+
+.meal-image-container {
+    position: relative;
+}
+
+.meal-plan-link-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    bottom: 0;
+    height: 40px;
+    width: 420px;
+    background-color: #D9D9D9;
+    border-radius: 0px 0px 25px 25px;
+}
+
+.meal-plan-item-link {
+    width: 100%;
+    text-align: center;
+}
+
+.meal-plan-item-link:hover {
+    color: black;
+}
+
+.meal-plan-item-link img {
+    width: 100%;
+}
+
+.meal-container-list {
+    padding: 0px;
+    margin: 0px;
+    list-style-type: none;
+    text-align: center;
+}

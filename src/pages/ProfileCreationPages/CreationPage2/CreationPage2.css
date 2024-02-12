@@ -1,0 +1,20 @@
+.weight-loss-button-container {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.weight-loss-button {
+    width: 500px;
+    height: 60px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #D9D9D9;
+    border-radius: 20px;
+    color: black;
+}
+
+.weight-loss-button p {
+    font-size: 32px;
+}

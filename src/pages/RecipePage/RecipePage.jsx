@@ -29,7 +29,7 @@ function RecipePage() {
 
     return (
         <div className="recipe-page">
-            <div>
+            <div id="recipe-image-overlay-container">
                 <h2>{recipe.Title}</h2>
                 <img id="recipe-image" src={recipe.Image} />
             </div>

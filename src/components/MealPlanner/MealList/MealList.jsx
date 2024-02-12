@@ -4,7 +4,7 @@ import './MealList.css';
 
 function MealList({ mealData }) {
     const macros = mealData.nutrients;
-    
+
     function capitalizeFirstLetter(word) {
     return word.charAt(0).toUpperCase() + word.slice(1);
     }   
@@ -13,7 +13,7 @@ function MealList({ mealData }) {
 
         console.log(mealData);
         return(
-        <div>
+        <div className="meal-list-container">
             <div className="meal-plan-macros-body">
                 <h2>{mealData.day} - Macros</h2>
                 <ul className="meal-plan-macros">
@@ -24,10 +24,11 @@ function MealList({ mealData }) {
                 </ul>
             </div>
 
-            <div className="meals"></div>
+            <div className="meals">
                 {mealData.meals.map((meal) => {
                     return <Meal key={meal.id} meal={meal} />
                 })}
+            </div>
         </div>
     )
 }

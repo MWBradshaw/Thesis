@@ -8,25 +8,25 @@ function Profiles() {
     const profilesList = useContext(ProfileContext);
 
     return(
-        <div>
+        <div className="container">
             <div className="main-profiles-header">
                 <ProfilesHeader />
             </div>
             <div className="profile-list-body">
-            <ProfileContext.Provider>
-                {profilesList && profilesList.map((profile, idx) => 
-                    <div key={idx}>
-                        <div>
-                            <p></p>   
-                        </div>
+                <ProfileContext.Provider>
+                    {profilesList && profilesList.map((profile, idx) => 
+                        <Link to="/" profile={profile} key={idx} className="profile">
+                            <div>
+                                <img className="profile-list-img" src={profile.imgSrc}></img>
+                            </div>
 
-                        <div>
-                            <p>{profile.name}</p>
-                        </div>
-                    </div>
-                )
-                }
-            </ProfileContext.Provider>
+                            <div>
+                                <p>{profile.name}</p>
+                            </div>
+                        </Link>
+                    )}
+                </ProfileContext.Provider>
+
                 <Link to="/profiles/page1" className="create-profile-button">
                     <div>
                         <img src="src/assets/create-profile-button.png" />

@@ -1,0 +1,12 @@
+.creation-profile-container3 {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+}
+
+.diet-select-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    margin-bottom: 50px;
+}

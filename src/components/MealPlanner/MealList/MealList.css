@@ -1,7 +1,12 @@
+.meal-list-container {
+    margin-bottom: 150px;
+}
+
 .meal-plan-macros-body {
     display: flex;
     flex-direction: column;
     align-items: center;
+    margin-bottom: 50px;
 }
 
 .meal-plan-macros {

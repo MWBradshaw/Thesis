@@ -7,6 +7,12 @@
     align-items: center;
 }
 
+#recipe-image-overlay-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}   
+
 #recipe-image {
     display: block;
     width: 250px;
