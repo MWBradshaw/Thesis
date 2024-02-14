@@ -35,8 +35,8 @@ function MealPlanner() {
                 <MealPlannerHeader />
             </div>
             <div className="search-button-body">
-                <div className="controls">
-                    <input type="number" placeholder="Calories (eg. 2000)" onChange={handleChange}></input>
+                <div className="search-input-body">
+                    <input type="number" className="search-input" placeholder="Calories (eg. 2000)" onChange={handleChange}></input>
                 </div>
                 <button onClick={fetchData}>Get Daily Meal Plan</button>
             </div>

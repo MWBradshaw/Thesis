@@ -1,7 +1,6 @@
 .container {
     display: flex;
     flex-direction: column;
-    justify-content: center;
     align-items: center;
     height: 80vh;
     width: 100vw;
@@ -13,6 +12,18 @@
     grid-template-columns: 1fr 1fr 1fr;
     grid-template-rows: 1fr 1fr 1fr;
     grid-gap: 15px;
+}
+
+.profile-template-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.upload-image-img {
+    width: 224px;
+    height: 224px;
+    border-radius: 50%;
 }
 
 .input-body {

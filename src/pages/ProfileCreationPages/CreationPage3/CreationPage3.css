@@ -10,3 +10,14 @@
     justify-content: flex-start;
     margin-bottom: 50px;
 }
+
+.diet-pref-select {
+
+}
+
+.diet-pref-select:after {
+    position: absolute;
+    content: "";
+    border: 6px solid transparent;
+    border-color: #fff transparent transparent transparent;
+}

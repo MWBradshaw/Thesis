@@ -46,7 +46,7 @@ function SearchBar() {
         <div>
             <div className="input-wrapper">
                 <FaSearch id="search-icon" />
-                <input placeholder="Search" value={input} onChange={(e) => handleChange(e.target.value)} onKeyPress={(e) => keyHandler(e)} />
+                <input className="search-input" placeholder="Search" value={input} onChange={(e) => handleChange(e.target.value)} onKeyPress={(e) => keyHandler(e)} />
             </div>
 
             <div className="search-result-body">

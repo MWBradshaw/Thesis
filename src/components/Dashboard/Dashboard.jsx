@@ -1,14 +1,19 @@
-import React from "react";
-import { Chart as ChartJS } from 'chart.js/auto';
+import React, { useContext } from "react";
+import { useLocation } from "react-router-dom";
 import { Line } from 'react-chartjs-2';
+import { Chart as ChartJS } from 'chart.js/auto';
 import DashboardHeader from "./DashboardHeader/DashboardHeader";
+import { ProfileContext } from "../../App";
 import "./Dashboard.css";
 
 
-function Dashboard({ profile }) {
+function Dashboard() {
+    const profilesList = useContext(ProfileContext);
+    const location = useLocation();
+    const profile = location.state || profilesList[0];
     
     return(
-        <div>
+        <div className="container">
             <div className="main-dashboard-header">
                 <DashboardHeader name={profile.name} />
             </div>
@@ -45,3 +50,6 @@ function Dashboard({ profile }) {
 }
 
 export default Dashboard;
+
+
+

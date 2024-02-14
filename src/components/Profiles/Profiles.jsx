@@ -15,7 +15,7 @@ function Profiles() {
             <div className="profile-list-body">
                 <ProfileContext.Provider>
                     {profilesList && profilesList.map((profile, idx) => 
-                        <Link to="/" profile={profile} key={idx} className="profile">
+                        <Link to="/" state={profile} key={idx} className="profile">
                             <div>
                                 <img className="profile-list-img" src={profile.imgSrc}></img>
                             </div>
@@ -29,7 +29,7 @@ function Profiles() {
 
                 <Link to="/profiles/page1" className="create-profile-button">
                     <div>
-                        <img src="src/assets/create-profile-button.png" />
+                        <img src="public/assets/create-profile-button.png" />
                     </div>
                     <p>Create New Profile</p>
                 </Link>
