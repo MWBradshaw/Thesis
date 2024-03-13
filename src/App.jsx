@@ -15,12 +15,22 @@ import ScrollToTop from "./ScrollToTop/ScrollToTop.jsx";
 import './App.css'
 
 export const ProfileContext = createContext();
-let profiles = [{ name: 'John', age: 25, height: 1.71 , weight: 170, imgSrc: 'public/assets/john_img.png' }, { name: 'Daisy', age: 30, height: 1.80, weight: 190, imgSrc: 'public/assets/daisy_img.png' }];
+let profiles = [{ name: 'John', email: 'davisjohn@gmail.com', age: 25, height: 1.71 , weight: 170, imgSrc: 'assets/john_img.png' }, { name: 'Daisy', email: 'apudaisy@gmail.com', age: 30, height: 1.80, weight: 190, imgSrc: 'assets/daisy_img.png' }];
+
+function convertHeightToFeetAndInches(heightMeters) {
+  const totalInches = heightMeters * 39.3701;
+  const feet = Math.floor(totalInches / 12);
+  const inches = Math.round(totalInches % 12);
+  return `${feet}' ${inches}''`;
+}
 
 for(const profile of profiles) {
   const weightKg = profile.weight / 2.2
   const bmi = weightKg / (profile.height ** 2);
   profile['bmi'] = bmi.toFixed(0);
+
+  const heightFeetAndInches = convertHeightToFeetAndInches(profile.height);
+  profile['heightFeetAndInches'] = heightFeetAndInches;
 }
 
 function App() {
@@ -34,16 +44,16 @@ function App() {
           <Navbar />
           <div className="content">
             <Routes>
-              <Route path="/" element={<Dashboard />} />
-              <Route path="/inventory" element={<Inventory />} />
-              <Route path="/mealplanner" element={<MealPlanner />} />
-              <Route path="/profiles" element={<Profiles/>} />
-              <Route path="/recipes" element={<Recipes />} />
-              <Route path="/recipe-item/:title" element={<RecipePage />} />
-              <Route path="/profiles/page1" element={<CreationPage1 formData={formData} setFormData={setFormData} />} />
-              <Route path="/profiles/page2" element={<CreationPage2 formData={formData} setFormData={setFormData} />} />
-              <Route path="/profiles/page3" element={<CreationPage3 formData={formData} setFormData={setFormData} />} />
-              <Route path="/profiles/page4" element={<CreationPage4 formData={formData} setFormData={setFormData}/>} />
+              <Route path="/Thesis" element={<Dashboard />} />
+              <Route path="/Thesis/inventory" element={<Inventory />} />
+              <Route path="/Thesis/mealplanner" element={<MealPlanner />} />
+              <Route path="/Thesis/profiles" element={<Profiles/>} />
+              <Route path="/Thesis/recipes" element={<Recipes />} />
+              <Route path="/Thesis/recipe-item/:title" element={<RecipePage />} />
+              <Route path="/Thesis/profiles/page1" element={<CreationPage1 formData={formData} setFormData={setFormData} />} />
+              <Route path="/Thesis/profiles/page2" element={<CreationPage2 formData={formData} setFormData={setFormData} />} />
+              <Route path="/Thesis/profiles/page3" element={<CreationPage3 formData={formData} setFormData={setFormData} />} />
+              <Route path="/Thesis/profiles/page4" element={<CreationPage4 formData={formData} setFormData={setFormData}/>} />
             </Routes>
           </div>
         </BrowserRouter>

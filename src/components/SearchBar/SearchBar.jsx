@@ -53,7 +53,7 @@ function SearchBar() {
                 {listLoaded && searchList.map((item) => 
                     <Link
                         key={item.id}
-                        to={`/recipe-item/${encodeURIComponent(item.Title)}`}
+                        to={`/Thesis/recipe-item/${encodeURIComponent(item.Title)}`}
                         state={item}
                         className="recipe-link"
                         >

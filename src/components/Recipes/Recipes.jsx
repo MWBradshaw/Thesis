@@ -6,7 +6,7 @@ import "./Recipes.css";
 
 function Recipes() {
     return(
-        <div>
+        <div className="container">
             <div className="main-recipes-header">
                 <RecipesHeader />
             </div>

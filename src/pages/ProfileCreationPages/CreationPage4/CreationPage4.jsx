@@ -27,7 +27,8 @@ function CreationPage4({ formData, setFormData }) {
             <div className="creation-profile-container4">
                 <div className="meal-select-container">
                     <label for="meal-type">What types of meals do you typically enjoy (e.g., salads, stir-fries, pasta dishes)?</label>
-                    <select name="meal-type" value={formData.mealType || ''} onChange={handleChange} className="">
+                    <select name="meal-type" value={formData.mealType || ''} onChange={handleChange} className="meal-type-select">
+                        <option label=" "></option>
                         <option value="salads">Salads</option>
                         <option value="stir-fries">Stir-fries</option>
                         <option value="pasta-dishes">Pasta dishes</option>
@@ -42,7 +43,8 @@ function CreationPage4({ formData, setFormData }) {
 
                 <div className="meal-select-container">
                     <label for="meal-cooking-frequency">How often do you cook meals at home during a typical week?</label>
-                    <select name="meal-cooking-frequency" value={formData.mealCookingFrequency || ''} onChange={handleChange} className="">
+                    <select name="meal-cooking-frequency" value={formData.mealCookingFrequency || ''} onChange={handleChange} className="meal-type-select">
+                        <option label=" "></option>
                         <option value="none">Never</option>
                         <option value="1-2">1-2 times per week</option>
                         <option value="3-4">3-4 times per week</option>
@@ -53,7 +55,8 @@ function CreationPage4({ formData, setFormData }) {
 
                 <div className="meal-select-container">
                     <label for="meal-prep">Do you preper to plan your meals in advance, or do you typically decide on meals spontaneously?</label>
-                    <select name="meal-prep" value={formData.mealPrep || ''} onChange={handleChange} className="">
+                    <select name="meal-prep" value={formData.mealPrep || ''} onChange={handleChange} className="meal-type-select">
+                        <option></option>
                         <option value="plan">Plan meals in advance</option>
                         <option value="spontaneous">Decide on meals spontaneously</option>
                         <option value="combination">Combination of both</option>
@@ -63,11 +66,11 @@ function CreationPage4({ formData, setFormData }) {
             </div>
 
             <div className="profile-navigation-body">
-                <Link className="navigation-profile-page-button" to="/profiles/page3">
+                <Link className="navigation-profile-page-button" to="/Thesis/profiles/page3">
                     <p>Go Back</p>
                 </Link>
 
-                <Link className="navigation-profile-page-button" to="/profiles" onClick={finalizeProfile}>
+                <Link className="navigation-profile-page-button" to="/Thesis/profiles" onClick={finalizeProfile}>
                     <p>Submit</p>
                 </Link>
             </div>

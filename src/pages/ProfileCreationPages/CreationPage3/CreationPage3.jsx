@@ -20,6 +20,7 @@ function CreationPage3({ formData, setFormData }) {
                 <div className="diet-select-container">
                     <label for="diet-pref">Do you follow any specific dietary preferences or restrictions?</label>
                     <select name="diet-pref" value={formData.dietPref || ''} onChange={handleChange} className="diet-pref-select">
+                        <option label=" "></option>
                         <option value="vegetarian">Vegetarian</option>
                         <option value="vegen">Vegen</option>
                         <option value="pescatarian">Pescatarian</option>
@@ -33,6 +34,7 @@ function CreationPage3({ formData, setFormData }) {
                 <div className="diet-select-container">
                     <label for="food-allergens">Do you have any food allergies or intolerances? If yes, please specify.</label>
                     <select name="food-allergens" value={formData.foodAllergens || ''} onChange={handleChange} className="diet-pref-select">
+                        <option label=" "></option>
                         <option value="dairy">Milk (Dairy)</option>
                         <option value="eggs">Eggs</option>
                         <option value="peanuts">Peanuts</option>
@@ -48,6 +50,7 @@ function CreationPage3({ formData, setFormData }) {
                 <div className="diet-select-container">
                     <label for="meal-pref">Do you have any preferred cooking methods (e.g., grilling, baking, steaming) for preparing meals?</label>
                     <select name="meal-pref" value={formData.mealPref || ''} onChange={handleChange} className="diet-pref-select">
+                        <option label=" "></option>
                         <option value="grilling">Grilling</option>
                         <option value="baking">Baking</option>
                         <option value="steaming">Steaming</option>
@@ -60,11 +63,11 @@ function CreationPage3({ formData, setFormData }) {
             </div>
 
             <div className="profile-navigation-body">
-                <Link className="navigation-profile-page-button" to="/profiles/page2">
+                <Link className="navigation-profile-page-button" to="/Thesis/profiles/page2">
                     <p>Go Back</p>
                 </Link>
 
-                <Link className="navigation-profile-page-button" to="/profiles/page4">
+                <Link className="navigation-profile-page-button" to="/Thesis/profiles/page4">
                     <p>Next</p>
                 </Link>
             </div>

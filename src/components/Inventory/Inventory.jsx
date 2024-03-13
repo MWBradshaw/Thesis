@@ -4,7 +4,7 @@ import "./Inventory.css";
 
 function Inventory() {
     return(
-        <div>
+        <div className="container">
             <div className="main-inventory-header">
                 <InventoryHeader />
             </div>

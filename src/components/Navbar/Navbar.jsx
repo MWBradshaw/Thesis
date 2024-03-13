@@ -5,16 +5,17 @@ import './Navbar.css';
 function Navbar() {
     return(
         <div id="navbar">
-            <div id="navbar-brand-body">
-                <h2>The Health Report</h2>
-            </div>
-
+            <Link to="/Thesis/">
+                <div id="navbar-brand-body">
+                    <img id="navbar-brand" src="public/assets/icons/Logo.png"></img>
+                    <p>The Health Report</p>
+                </div>
+            </Link>
             <div id="navbar-link-body">
-                <Link to="/"><p>Dashboard</p></Link>
-                <Link to="/profiles"><p>Profiles</p></Link>
-                <Link to="/inventory"><p>Inventory</p></Link>
-                <Link to="/recipes"><p>Recipes</p></Link>
-                <Link to="/mealplanner"><p>Meal Planner</p></Link>
+                <Link to="/Thesis/profiles"><p>Profiles</p></Link>
+                <Link to="/Thesis/inventory"><p>Inventory</p></Link>
+                <Link to="/Thesis/recipes"><p>Recipes</p></Link>
+                <Link to="/Thesis/mealplanner"><p>Meal Planner</p></Link>
             </div>
         </div>
     )

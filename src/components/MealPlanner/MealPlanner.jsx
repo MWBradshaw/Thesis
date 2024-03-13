@@ -30,7 +30,7 @@ function MealPlanner() {
     }
 
     return(
-        <div>
+        <div className="container">
             <div className="main-mealplanner-header">
                 <MealPlannerHeader />
             </div>

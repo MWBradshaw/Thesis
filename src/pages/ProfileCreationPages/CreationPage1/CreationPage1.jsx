@@ -1,9 +1,12 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
+import axios from 'axios';
 import ProfileCreationHeader from '../ProfileCreationHeader/ProfileCreationHeader';
 import "./CreationPage1.css";
 
 function CreationPage1({ formData, setFormData }) {
+  const [file, setFile] = useState(null);
+
   const handleChange = (e) => {
     setFormData({
       ...formData,
@@ -12,6 +15,16 @@ function CreationPage1({ formData, setFormData }) {
     console.log(formData)
   };
 
+  const handleFileChange = (e) => {
+    setFile(e.target.files[0]);
+  };
+
+  const uploadData = () => {
+    const formData = new FormData()
+    formData.append('file', file)
+    axios.post('http://localhost:5173/Thesis/upload', formData).then(res => {}).catch(er => console.log(er))
+  }
+
   return (
     <div className="container">
       <div>
@@ -19,8 +32,11 @@ function CreationPage1({ formData, setFormData }) {
       </div>
       <div className="creation-profile-container1">
         <div className="profile-template-container">
-            <img src="../../public/assets/profile-template-pic.jpg" className="upload-image-img" alt="Profile Template" />
+          <label htmlFor="imageUpload" className="upload-image-label">
+            <img src="../assets/profile-template-pic.jpg" className="upload-image-img" alt="Profile Template" />
             <p>Upload Image</p>
+            <input type="file" id="imageUpload" name="imageUpload" accept="image/*" style={{ display: "none" }} onChange={handleFileChange} />
+          </label>
         </div>
 
         <div>
@@ -58,11 +74,11 @@ function CreationPage1({ formData, setFormData }) {
       </div>
 
       <div className="profile-navigation-body">
-        <Link className="navigation-profile-page-button" to="/profiles">
+        <Link className="navigation-profile-page-button" to="/Thesis/profiles">
           <p>Go Back</p>
         </Link>
 
-        <Link className="navigation-profile-page-button" to="/profiles/page2">
+        <Link className="navigation-profile-page-button" to="/Thesis/profiles/page2" onClick={uploadData}>
           <p>Next</p>
         </Link>
       </div>

@@ -8,10 +8,26 @@ function CreationPage2({ formData, setFormData }) {
 
     const handleButtonClick = (buttonName) => {
         setActiveButton(buttonName);
+        let calorieLimit = ""
+
+        switch(buttonName) {
+            case "loseWeight":
+                calorieLimit = 1750
+                break;
+            case "maintainWeight":
+                calorieLimit = 2000
+                break;
+            case "buildMuscle":
+                calorieLimit = 2500
+                break;
+            default:
+                calorieLimit = 2000
+        }
 
         setFormData({
             ...formData,
-            weightLossGoal: buttonName
+            weightLossGoal: buttonName,
+            recommendedCalorieLimit: calorieLimit
           });
         console.log(formData)
     };
@@ -37,11 +53,11 @@ function CreationPage2({ formData, setFormData }) {
             </div>
 
             <div className="profile-navigation-body">
-                <Link className="navigation-profile-page-button" to="/profiles/page1">
+                <Link className="navigation-profile-page-button" to="/Thesis/profiles/page1">
                     <p>Go Back</p>
                 </Link>
 
-                <Link className="navigation-profile-page-button" to="/profiles/page3">
+                <Link className="navigation-profile-page-button" to="/Thesis/profiles/page3">
                     <p>Next</p>
                 </Link>
             </div>

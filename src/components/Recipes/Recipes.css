@@ -2,6 +2,9 @@
     text-align: center;
     width: 100vw;
     height: auto;
+    margin-top: 100px;
+    margin-bottom: 75px;
+    color: white;
 }
 
 .search-bar-container {
