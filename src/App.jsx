@@ -15,7 +15,7 @@ import ScrollToTop from "./ScrollToTop/ScrollToTop.jsx";
 import './App.css'
 
 export const ProfileContext = createContext();
-let profiles = [{ name: 'John', email: 'davisjohn@gmail.com', age: 25, height: 1.71 , weight: 170, imgSrc: 'assets/john_img.png' }, { name: 'Daisy', email: 'apudaisy@gmail.com', age: 30, height: 1.80, weight: 190, imgSrc: 'assets/daisy_img.png' }];
+let profiles = [{ name: 'John', email: 'davisjohn@gmail.com', age: 25, height: 1.71 , weight: 155, imgSrc: 'assets/john_img.png' }, { name: 'Vanessa', email: 'gracevan@gmail.com', age: 30, height: 1.80, weight: 130, imgSrc: 'assets/vanessa_img.png' }];
 
 function convertHeightToFeetAndInches(heightMeters) {
   const totalInches = heightMeters * 39.3701;

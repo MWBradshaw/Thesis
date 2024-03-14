@@ -3,14 +3,17 @@
     width: 100vw;
     flex-direction: column;
     justify-content: center;
+    padding-bottom: 100px;
     margin: 0 auto;
     align-items: center;
+    background-color: #254332;
 }
 
 #recipe-image-overlay-container {
     display: flex;
     flex-direction: column;
     align-items: center;
+    color: white;
 }   
 
 #recipe-image {
@@ -50,6 +53,7 @@
     height: auto;
     border-radius: 20px;
     border: 3px solid white;
+    background-color: white;
     padding: 10px;
     margin-right: 40px;
 }
@@ -62,6 +66,7 @@
     width: 500px;
     border-radius: 20px;
     border: 3px solid white;
+    background-color: white;
     padding: 10px;
     margin-left: 40px;
 }

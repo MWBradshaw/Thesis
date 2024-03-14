@@ -33,7 +33,7 @@ function CreationPage2({ formData, setFormData }) {
     };
 
     return(
-        <div className="container">
+        <div className="profile-container">
             <div>
                 <ProfileCreationHeader title="Add New Profile - Weight Loss Goals" />
             </div>

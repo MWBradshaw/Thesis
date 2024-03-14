@@ -1,4 +1,4 @@
-import React, { useContext, useState } from "react";
+import React, { useContext, useState, useEffect } from "react";
 import { useLocation } from "react-router-dom";
 import { Line } from 'react-chartjs-2';
 import { Chart as ChartJS } from 'chart.js/auto';
@@ -11,6 +11,34 @@ function Dashboard() {
     const location = useLocation();
     const profile = location.state || profilesList[0];
     const [graphName, setGraphName] = useState('Weight');
+    const [graphData, setGraphData] = useState([1500, 1700, 1600, 1800, 1575, 1400, 1500]);
+
+
+    useEffect(() => {
+        switch(graphName) {
+            case 'Weight (lbs)':
+                setGraphData([155.23, 152.67, 152.21, 152.67, 155.68, 154.44, 152.67])
+                break;
+            case 'BMI':
+                setGraphData([24.2, 24, 23.9, 24, 24.3, 24.1, 24])
+                break;
+            case 'Blood Pressure (mmHg)':
+                setGraphData([120, 130, 125, 118, 135, 122, 128])
+                break;
+            case 'Blood Glucose (mg/dL)':
+                setGraphData([95, 140, 110, 85, 160, 100, 120])
+                break;
+            case 'Cholesteral (mg/dL)':
+                setGraphData([200, 100, 60, 150, 500, 130, 120])
+                break;
+            case 'Calorie Consumption (kcal)':
+                setGraphData([1500, 1700, 1600, 1800, 1575, 1400, 1500])
+                break;
+        }
+    }, [graphName])
+
+
+
     return(
         <div className="container">
             <div>
@@ -38,7 +66,7 @@ function Dashboard() {
                     <div>
                         <p className="dashboard-info-title">Health Characteristics</p>
 
-                        <div className="dashboard-button-container" onClick={() => setGraphName('Weight')}>
+                        <div className="dashboard-button-container" onClick={() => setGraphName('Weight (lbs)')}>
                             <img src="public/assets/icons/white/weight@2x.png"></img>
                             <p>Weight</p>
                         </div>
@@ -48,22 +76,22 @@ function Dashboard() {
                             <p>BMI</p>
                         </div>
 
-                        <div className="dashboard-button-container" onClick={() => setGraphName('Blood Pressure')}>
+                        <div className="dashboard-button-container" onClick={() => setGraphName('Blood Pressure (mmHg)')}>
                             <img src="public/assets/icons/white/blood_pressure_monitor@2x.png"></img>
                             <p>Blood Pressure</p>
                         </div>
 
-                        <div className="dashboard-button-container" onClick={() => setGraphName('Blood Glucose')}>
+                        <div className="dashboard-button-container" onClick={() => setGraphName('Blood Glucose (mg/dL)')}>
                             <img src="public/assets/icons/white/diabetes_measure@2x.png"></img>
                             <p>Blood Glucose</p>
                         </div>
 
-                        <div className="dashboard-button-container" onClick={() => setGraphName('Cholesteral')}>
+                        <div className="dashboard-button-container" onClick={() => setGraphName('Cholesteral (mg/dL)')}>
                             <img src="public/assets/icons/white/cholesterol.png"></img>
                             <p>Cholesteral</p>   
                         </div>
 
-                        <div className="dashboard-button-container" onClick={() => setGraphName('Calorie Consumption')}>
+                        <div className="dashboard-button-container" onClick={() => setGraphName('Calorie Consumption (kcal)')}>
                             <img src="public/assets/icons/white/nutrition@2x.png"></img>
                             <p>Calorie Consumption</p> 
                         </div>
@@ -90,12 +118,12 @@ function Dashboard() {
                         </select>
                     </div>
                     <div>
-                        <Line width={700} height={400} data={{
+                        <Line width={700} height={400} key={graphName} data={{
                                 labels: ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday', 'Sunday'],
                                 datasets: [
                                     {
-                                        label: "Calorie Consumption (kcal)",
-                                        data: [1500, 1700, 1600, 1800, 1575, 1400, 1500],
+                                        label: graphName,
+                                        data: graphData,
                                         borderColor: '#36A2EB',
                                         backgroundColor: '#9BD0F5',
                                     }
@@ -104,48 +132,6 @@ function Dashboard() {
                     </div>
                 </div>
             </div>
-
-            {/* <div id="dashboard-container">
-                <div className="profile-info-container">
-                    
-                    <img className="profile-demographic-img" src={profile.imgSrc} />
-
-
-                    <div className="profile-demographic-info-container">
-                        <p>Age: {profile.age}</p>
-                        <p>Height: {profile.height}m</p>
-                        <p>Weight: {profile.weight} lbs.</p>
-                        <p>BMI: {profile.bmi}</p>
-                    </div>
-                </div>
-
-                <div className="dashboard-chart-container">
-                    <Line width={700} height={400} data={{
-                        labels: ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday', 'Sunday'],
-                        datasets: [
-                            {
-                                label: "Calorie Consumption (kcal)",
-                                data: [1500, 1700, 1600, 1800, 1575, 1400, 1500],
-                                borderColor: '#36A2EB',
-                                backgroundColor: '#9BD0F5',
-                            }
-                        ]
-                    }} />
-
-                    <div className="calorie-limit-container">
-                        <div>
-                            <h2>Recommended Calorie Consumption Limit:</h2>
-                            <h2>2000 kcal</h2>
-                        </div>
-
-                        <div>
-                            <button>
-                                
-                            </button>
-                        </div>
-                    </div>
-                </div>
-            </div> */}
         </div>
     )
 }

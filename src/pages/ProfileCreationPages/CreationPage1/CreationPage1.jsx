@@ -26,32 +26,32 @@ function CreationPage1({ formData, setFormData }) {
   }
 
   return (
-    <div className="container">
+    <div className="profile-container">
       <div>
-        <ProfileCreationHeader title="Add New Profile" />
+        <ProfileCreationHeader title="Add Profile" />
       </div>
       <div className="creation-profile-container1">
         <div className="profile-template-container">
           <label htmlFor="imageUpload" className="upload-image-label">
             <img src="../assets/profile-template-pic.jpg" className="upload-image-img" alt="Profile Template" />
-            <p>Upload Image</p>
-            <input type="file" id="imageUpload" name="imageUpload" accept="image/*" style={{ display: "none" }} onChange={handleFileChange} />
+            <p className="profile-label">Upload Image</p>
+            <input type="file" id="imageUpload" name="imageUpload" accept="image/*" style={{ display: "none" }} onChange={handleFileChange} multiple={false} />
           </label>
         </div>
 
         <div>
           <div className="input-body">
-            <label htmlFor="displayName">Display Name:</label>
+            <label htmlFor="displayName" className="profile-label">Display Name:</label>
             <input type="text" name="displayName" value={formData.displayName || ''} onChange={handleChange} />
           </div>
 
           <div className="input-body">
-            <label htmlFor="age">Age:</label>
+            <label htmlFor="age" className="profile-label">Age:</label>
             <input type="number" name="age" min="15" max="75" placeholder="15-75" value={formData.age || ''} onChange={handleChange} />
           </div>
 
           <div className="input-body">
-            <label htmlFor="gender">Gender:</label>
+            <label htmlFor="gender" className="profile-label">Gender:</label>
             <select name="gender" value={formData.gender || ''} onChange={handleChange}>
               <option value="male">Male</option>
               <option value="female">Female</option>
@@ -62,12 +62,12 @@ function CreationPage1({ formData, setFormData }) {
 
         <div>
           <div className="input-body">
-            <label htmlFor="height">Height (m):</label>
+            <label htmlFor="height" className="profile-label">Height (m):</label>
             <input type="text" name="height" placeholder="Enter height in meters" value={formData.height || ''} onChange={handleChange} />
           </div>
 
           <div className="input-body">
-            <label htmlFor="weight">Weight (kg):</label>
+            <label htmlFor="weight" className="profile-label">Weight (kg):</label>
             <input type="text" name="weight" placeholder="Enter weight in kilograms" value={formData.weight || ''} onChange={handleChange} />
           </div>
         </div>

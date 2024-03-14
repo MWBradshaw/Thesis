@@ -44,6 +44,7 @@
 .meal-plan-item-link {
     width: 100%;
     text-align: center;
+    text-decoration: none;
 }
 
 .meal-plan-item-link:hover {

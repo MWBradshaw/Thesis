@@ -1,8 +1,16 @@
+.profile-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100vw;
+    height: 100vh;
+    background-color: #254332;
+}
+
 .creation-profile-container1 {
     display: grid;
     width: 100%;
     grid-template-columns: 1fr 1fr 1fr;
-    grid-template-rows: 1fr 1fr 1fr;
     grid-gap: 15px;
 }
 
@@ -24,6 +32,10 @@
     justify-content: start;
 }
 
+.input-body + .input-body {
+    margin-top: 20px;
+}
+
 
 
 input[type=text], input[type=number], select {
@@ -37,7 +49,7 @@ select option {
 }
 
 .profile-navigation-body {
-    position: absolute;
+    position: relative;
     bottom: 10px;
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -67,4 +79,9 @@ select option {
 
 label p {
     text-align: center;
+}
+
+.profile-label {
+    color: white;
+    font-size: 20px;
 }

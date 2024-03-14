@@ -38,7 +38,7 @@ function MealPlanner() {
                 <div className="search-input-body">
                     <input type="number" className="search-input" placeholder="Calories (eg. 2000)" onChange={handleChange}></input>
                 </div>
-                <button onClick={fetchData}>Get Daily Meal Plan</button>
+                <button id="fetchMealDataButton" onClick={fetchData}>Get Daily Meal Plan</button>
             </div>
             {mealData && mealData.map((day) => (
                 

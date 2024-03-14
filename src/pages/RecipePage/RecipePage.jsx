@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { useLocation } from "react-router-dom";
 import { FaRegHeart } from "react-icons/fa6";
 import { FaHeart } from "react-icons/fa";
@@ -17,14 +17,19 @@ function RecipePage() {
 
     const instructions = recipe.Instructions.split(". ");
 
-    function handleClick() {
-        setFavourited(!favourited);
+
+    useEffect(() => {
         if(favourited) {
-            localStorage.setItem(recipe.Title, recipe)
+            console.log(recipe)
+            localStorage.setItem(recipe.Title, JSON.stringify(recipe));
         }
         else {
-            localStorage.removeItem(recipe.Title)
+            localStorage.removeItem(recipe.Title);
         }
+    }, [favourited])
+
+    function handleClick() {
+        setFavourited(!favourited);
     }
 
     return (

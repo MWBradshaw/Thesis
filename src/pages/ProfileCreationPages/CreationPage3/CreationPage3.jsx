@@ -13,12 +13,12 @@ function CreationPage3({ formData, setFormData }) {
       };
 
     return(
-        <div className="container">
+        <div className="profile-container">
             <ProfileCreationHeader title="Add New Profile - Dietary Information" />
 
             <div className="creation-profile-container3">
                 <div className="diet-select-container">
-                    <label for="diet-pref">Do you follow any specific dietary preferences or restrictions?</label>
+                    <label for="diet-pref" className="profile-label">Do you follow any specific dietary preferences or restrictions?</label>
                     <select name="diet-pref" value={formData.dietPref || ''} onChange={handleChange} className="diet-pref-select">
                         <option label=" "></option>
                         <option value="vegetarian">Vegetarian</option>
@@ -32,7 +32,7 @@ function CreationPage3({ formData, setFormData }) {
                 </div>
 
                 <div className="diet-select-container">
-                    <label for="food-allergens">Do you have any food allergies or intolerances? If yes, please specify.</label>
+                    <label for="food-allergens" className="profile-label">Do you have any food allergies or intolerances? If yes, please specify.</label>
                     <select name="food-allergens" value={formData.foodAllergens || ''} onChange={handleChange} className="diet-pref-select">
                         <option label=" "></option>
                         <option value="dairy">Milk (Dairy)</option>
@@ -48,7 +48,7 @@ function CreationPage3({ formData, setFormData }) {
                 </div>
 
                 <div className="diet-select-container">
-                    <label for="meal-pref">Do you have any preferred cooking methods (e.g., grilling, baking, steaming) for preparing meals?</label>
+                    <label for="meal-pref" className="profile-label">Do you have any preferred cooking methods (e.g., grilling, baking, steaming) for preparing meals?</label>
                     <select name="meal-pref" value={formData.mealPref || ''} onChange={handleChange} className="diet-pref-select">
                         <option label=" "></option>
                         <option value="grilling">Grilling</option>

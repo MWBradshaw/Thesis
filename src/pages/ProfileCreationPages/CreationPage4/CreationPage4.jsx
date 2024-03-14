@@ -21,12 +21,12 @@ function CreationPage4({ formData, setFormData }) {
     }
 
     return(
-        <div className="container">
+        <div className="profile-container">
             <ProfileCreationHeader title="Add New Profile - Meal Preferences" />
 
             <div className="creation-profile-container4">
                 <div className="meal-select-container">
-                    <label for="meal-type">What types of meals do you typically enjoy (e.g., salads, stir-fries, pasta dishes)?</label>
+                    <label for="meal-type" className="profile-label">What types of meals do you typically enjoy (e.g., salads, stir-fries, pasta dishes)?</label>
                     <select name="meal-type" value={formData.mealType || ''} onChange={handleChange} className="meal-type-select">
                         <option label=" "></option>
                         <option value="salads">Salads</option>
@@ -42,7 +42,7 @@ function CreationPage4({ formData, setFormData }) {
                 </div>
 
                 <div className="meal-select-container">
-                    <label for="meal-cooking-frequency">How often do you cook meals at home during a typical week?</label>
+                    <label for="meal-cooking-frequency" className="profile-label">How often do you cook meals at home during a typical week?</label>
                     <select name="meal-cooking-frequency" value={formData.mealCookingFrequency || ''} onChange={handleChange} className="meal-type-select">
                         <option label=" "></option>
                         <option value="none">Never</option>
@@ -54,7 +54,7 @@ function CreationPage4({ formData, setFormData }) {
                 </div>
 
                 <div className="meal-select-container">
-                    <label for="meal-prep">Do you preper to plan your meals in advance, or do you typically decide on meals spontaneously?</label>
+                    <label for="meal-prep" className="profile-label">Do you preper to plan your meals in advance, or do you typically decide on meals spontaneously?</label>
                     <select name="meal-prep" value={formData.mealPrep || ''} onChange={handleChange} className="meal-type-select">
                         <option></option>
                         <option value="plan">Plan meals in advance</option>

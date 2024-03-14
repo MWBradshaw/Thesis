@@ -2,6 +2,7 @@
     text-align: center;
     width: 100vw;
     margin-top: 100px;
+    margin-bottom: 100px;
     color: white;
 }
 
@@ -9,7 +10,7 @@
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
     gap: 120px;
-    margin: auto;
+    margin: 0px;
     color: white;
 }
 
@@ -28,7 +29,6 @@
 .profile-list-img {
     width: 224px;
     height: 224px;
-    border-radius: 50%;
 }
 
 .create-profile-button {

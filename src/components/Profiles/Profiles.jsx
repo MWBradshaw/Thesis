@@ -21,7 +21,7 @@ function Profiles() {
                             </div>
 
                             <div>
-                                <p>{profile.name}</p>
+                                <p className="profile-label">{profile.name}</p>
                             </div>
                         </Link>
                     )}
@@ -29,9 +29,9 @@ function Profiles() {
 
                 <Link to="/Thesis/profiles/page1" className="create-profile-button">
                     <div>
-                        <img src="public/assets/create-profile-button.png" />
+                        <img className="profile-list-img" src="public/assets/create-profile-button.png" />
                     </div>
-                    <p>Create New Profile</p>
+                    <p className="profile-label">Add Profile</p>
                 </Link>
             </div>
         </div>
