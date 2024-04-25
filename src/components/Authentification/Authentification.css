@@ -1,0 +1,21 @@
+#authentication-container {
+    background-color: #254332;
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#logo-container {
+    display: flex;
+    flex-direction: column;
+}
+
+#logo {
+   margin: auto 0;
+}
+
+#logo-text {
+    color: white;
+}

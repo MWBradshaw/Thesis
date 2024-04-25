@@ -2,7 +2,9 @@ import { auth, googleProvider, db } from "../../config/firebase.js";
 import { createUserWithEmailAndPassword, signInWithRedirect, signOut } from "firebase/auth";
 import React, { useState, useEffect } from "react";
 import { getDocs, collection } from "firebase/firestore";
-
+import './Authentification.css'
+import Logo from "../../../public/assets/icons/Logo.png";
+        
 const Authentification = () => {
     const [email, setEmail] = useState("");
     const [password, setPassword] = useState("");
@@ -49,7 +51,11 @@ const Authentification = () => {
     }
 
     return(
-        <div>
+        <div id="authentication-container">
+            <div id="logo-container">
+                <img id="logo" src={Logo} alt="The Health Report Logo" /> 
+                <h2 id="logo-text">The Health Report</h2>
+            </div>
             <input placeholder="E-mail" onChange={(e) => setEmail(e.target.value)}></input>
             <input placeholder="Password" type="password" onChange={(e) => setPassword(e.target.value)}></input>
             <button onClick={signIn}>Sign In</button>
