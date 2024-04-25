@@ -6,7 +6,7 @@ import "./Profiles.css";
 
 function Profiles() {
     const profilesList = useContext(ProfileContext);
-
+    
     return(
         <div className="container">
             <div className="main-profiles-header">

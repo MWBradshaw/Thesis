@@ -13,7 +13,6 @@ function Dashboard() {
     const [graphName, setGraphName] = useState('Weight');
     const [graphData, setGraphData] = useState([1500, 1700, 1600, 1800, 1575, 1400, 1500]);
 
-
     useEffect(() => {
         switch(graphName) {
             case 'Weight (lbs)':
