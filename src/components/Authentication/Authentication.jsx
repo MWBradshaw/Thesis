@@ -2,7 +2,7 @@ import { auth, googleProvider, db } from "../../config/firebase.js";
 import { createUserWithEmailAndPassword, signInWithRedirect, signOut } from "firebase/auth";
 import React, { useState, useEffect } from "react";
 import { getDocs, collection } from "firebase/firestore";
-import './Authentification.css'
+import './Authentication.css'
 import Logo from "../../../public/assets/icons/Logo.png";
         
 const Authentification = () => {

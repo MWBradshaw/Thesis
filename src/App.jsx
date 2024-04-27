@@ -1,6 +1,6 @@
 import React, { useState, createContext } from 'react';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
-import Authentification from './components/Authentification/Authentification.jsx';
+import Authentication from './components/Authentication/Authentication.jsx';
 
 import Navbar from './components/Navbar/Navbar.jsx';
 import Dashboard from "./components/Dashboard/Dashboard.jsx";
@@ -61,7 +61,7 @@ function App() {
     //     </BrowserRouter>
     //   </div>
     // </ProfileContext.Provider>
-    <Authentification />
+    <Authentication />
   )
 }
 
