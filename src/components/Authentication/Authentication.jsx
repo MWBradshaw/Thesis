@@ -56,9 +56,12 @@ const Authentification = () => {
                 <img id="logo" src={Logo} alt="The Health Report Logo" /> 
                 <h2 id="logo-text">The Health Report</h2>
             </div>
-            <input placeholder="E-mail" onChange={(e) => setEmail(e.target.value)}></input>
-            <input placeholder="Password" type="password" onChange={(e) => setPassword(e.target.value)}></input>
-            <button onClick={signIn}>Sign In</button>
+
+            <div id="authentication-input-container">
+                <input className="authentication-input" placeholder="E-mail Address" onChange={(e) => setEmail(e.target.value)}></input>
+                <input className="authentication-input" placeholder="Password" type="password" onChange={(e) => setPassword(e.target.value)}></input>
+                <button id="authentication-sign-in" onClick={signIn}>Sign In</button>
+            </div>
 
             <button onClick={signInWithGoogle}>Sign In With Google</button>
             <button onClick={logOut}>Log Out</button>

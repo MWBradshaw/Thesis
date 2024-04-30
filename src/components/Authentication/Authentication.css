@@ -22,3 +22,21 @@
 #logo-text {
     color: white;
 }
+
+#authentication-input-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+}
+
+.authentication-input {
+    height: 42px;
+    width: 360px;
+    border-radius: 20px;
+}
+
+#authentication-sign-in {
+    height: 42px;
+    width: 210px;
+}
