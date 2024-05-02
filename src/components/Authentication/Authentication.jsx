@@ -34,21 +34,21 @@ const Authentification = () => {
         }
     }
 
-    const signInWithGoogle = async () => {
-        try {
-        await signInWithRedirect(auth, googleProvider)
-        } catch (err) {
-            console.error(err)
-        }
-    }
+    // const signInWithGoogle = async () => {
+    //     try {
+    //     await signInWithRedirect(auth, googleProvider)
+    //     } catch (err) {
+    //         console.error(err)
+    //     }
+    // }
 
-    const logOut = async () => {
-        try {
-        await signOut(auth)
-        } catch (err) {
-            console.error(err)
-        }
-    }
+    // const logOut = async () => {
+    //     try {
+    //     await signOut(auth)
+    //     } catch (err) {
+    //         console.error(err)
+    //     }
+    // }
 
     return(
         <div id="authentication-container">
@@ -63,8 +63,7 @@ const Authentification = () => {
                 <button id="authentication-sign-in" onClick={signIn}>Sign In</button>
             </div>
 
-            <button onClick={signInWithGoogle}>Sign In With Google</button>
-            <button onClick={logOut}>Log Out</button>
+            {/* <button onClick={logOut}>Log Out</button> */}
         </div>
     )
 }
